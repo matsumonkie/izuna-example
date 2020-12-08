@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: build project info for izuna
       id: hello
-      uses: matsumonkie/izuna-action@v0.11
+      uses: matsumonkie/izuna-action@v0.12
       with:
         packageName: 'izuna-example'
         ghcVersion: '8.10.1'
