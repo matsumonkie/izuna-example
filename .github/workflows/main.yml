@@ -39,6 +39,8 @@ jobs:
     - name: build project info for izuna
       uses: matsumonkie/izuna-action@v0.25
       with:
-        packageName: 'izuna-example'
+        owner: 'matsumonkie'
+        repository: 'izuna-example'
+        package: 'izuna-example'
         ghcVersion: '8.10.1'
         hieDirectory: '.hie/'
