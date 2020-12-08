@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - name: Hello world action step
+    - name: build project info for izuna
       id: hello
-      uses: matsumonkie/izuna-action@v0.1
+      uses: matsumonkie/izuna-action@v0.2
       with:
-        who-to-greet: '!iori!'
+        packageName: 'izuna-example'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
