@@ -7,9 +7,7 @@ jobs:
     steps:
     - name: build project info for izuna
       id: hello
-      uses: matsumonkie/izuna-action@v0.4
+      uses: matsumonkie/izuna-action@v0.5
       with:
         packageName: 'izuna-example'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        ghcVersion: '8.10.1'
