@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: build project info for izuna
       id: hello
-      uses: matsumonkie/izuna-action@v0.2
+      uses: matsumonkie/izuna-action@v0.3
       with:
         packageName: 'izuna-example'
     # Use the output from the `hello` step
