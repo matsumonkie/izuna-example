@@ -37,7 +37,7 @@ jobs:
 ##        stack build
 
     - name: build project info for izuna
-      uses: matsumonkie/izuna-action@v0.40
+      uses: matsumonkie/izuna-action@v0.41
       with:
         owner: 'matsumonkie'
         repository: 'izuna-example'
