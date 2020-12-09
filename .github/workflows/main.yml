@@ -34,7 +34,7 @@ jobs:
 
 #    - name: Build
 #      run: |
-#        stack build
+##        stack build
 
     - name: build project info for izuna
       uses: matsumonkie/izuna-action@v0.37
