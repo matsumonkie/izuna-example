@@ -12,3 +12,6 @@ greet user = do
 add :: Int -> Int -> Int
 add x y =
   x + y
+
+omg :: String
+omg = "OMGGGG!"
