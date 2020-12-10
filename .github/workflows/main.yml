@@ -32,9 +32,9 @@ jobs:
         path: ~/.stack
         key: ${{ runner.os }}-${{ matrix.ghc }}-stack
 
-#    - name: Build
-#      run: |
-##        stack build
+    - name: Build
+      run: |
+        stack build
 
     - name: build project info for izuna
       uses: matsumonkie/izuna-action@v0.43
