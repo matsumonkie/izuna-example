@@ -42,7 +42,7 @@ jobs:
         stack build --force-dirty
 
     - name: build project info for izuna
-      uses: matsumonkie/izuna-action@v0.53
+      uses: matsumonkie/izuna-action@v0.54
       with:
         package: 'izuna-example'
         ghcVersion: '8.10.1'
