@@ -39,6 +39,12 @@ jobs:
       run: |
         stack build
 
+    - name: test
+      run: |
+        pwd
+        ls -a
+        ls -a izuna-example/
+
     - name: build project info for izuna
       uses: matsumonkie/izuna-action@v0.52
       with:
