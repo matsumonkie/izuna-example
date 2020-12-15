@@ -40,7 +40,7 @@ jobs:
         stack build
 
     - name: build project info for izuna
-      uses: matsumonkie/izuna-action@v0.50
+      uses: matsumonkie/izuna-action@v0.51
       with:
         package: 'izuna-example'
         ghcVersion: '8.10.1'
