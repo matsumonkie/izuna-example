@@ -4,3 +4,6 @@ module Lib
 
 helloThere :: IO ()
 helloThere = putStrLn "someFunc"
+
+coucou :: String
+coucou = "coucou"
