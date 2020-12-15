@@ -1,5 +1,5 @@
 on:
-  # Trigger the workflow on push or pull request, but only for the master branch
+  # Trigger the workflow on push or pull request, but only for the main/master branch
   push:
     branches:
       - master
@@ -18,7 +18,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      if: github.event.action == 'opened' || github.event.action == 'synchronize' || github.event.ref == 'refs/heads/main'
+      if: github.event.action == 'opened' || github.event.action == 'synchronize' || github.event.ref == 'refs/heads/main' || github.event.ref == 'refs/head/master'
 
     - uses: haskell/actions/setup@v1
       name: Setup Haskell Stack
@@ -37,16 +37,12 @@ jobs:
 
     - name: Build
       run: |
-        stack build
-
-    - name: test
-      run: |
-        pwd
-        ls -a
-        ls -a izuna-example/
+        # when merging a PR on your main branch, if you have setup a cache, you will probably don't need to build your project
+        # so let's make sure we generate the .hie files if our cache doesn't have them!
+        stack build --force-dirty
 
     - name: build project info for izuna
-      uses: matsumonkie/izuna-action@v0.52
+      uses: matsumonkie/izuna-action@v0.53
       with:
         package: 'izuna-example'
         ghcVersion: '8.10.1'
